@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+  <link href="css/style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&=Open+Sans:wght@700&displa=display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="section">
+ <div class="container">
+         <div class="login-head">
+             <div class="btns">
+                 <div class="login-title">Служба приема</div>
+                 <button id="btn" class="btn">
+                     добавить
+                 </button>
+             </div>
+             <div style="padding-bottom: 30px;"></div>
+         </div>
+     <div id="myModal" class="modal">
+      <div class="modal-content">
+          <div class="modal-title">
+              Листок гостя
+          </div>
+          <div class="modal__title">Основная информация</div>
+          <form>
+              <div class="btn-group">
+                  <div style="width: 100%;">
+                      <label class="modal-label">фамилия</label>
+                      <input  placeholder="Фамилия"/>
+                  </div>
+                  <div  style="width: 100%;">
+                      <label class="modal-label">имя</label>
+                      <input  placeholder="имя" id="nameInput" type="text"/>
+                  </div>
+                  <div  style="width: 100%;">
+                      <label class="modal-label">отчество</label>
+                      <input  placeholder="отчество" id="surnameInput" type="text"/>
+                  </div>
+              </div>
+              <div class="btn-group">
+                  <div style="width: 100%">
+                      <label class="modal-label">страна рождения</label>
+                      <select style="width: 96%;" id="countryInput">
+                          <option value="" disabled selected>Выберите страну</option>
+                          <option>Rus</option>
+                          <option>Uzb</option>
+                          <option>Usa</option>
+                      </select>
+                  </div>
+                  <div  style="width: 100%">
+                      <label class="modal-label">дата рождения</label>
+                      <input type="date" id="startInput" name="trip-start"
+                             value="2023-08-22"
+                             min="2018-01-01" max="2018-12-31">
+                  </div>
+                  <div style="width: 100%">
+                      <label class="modal-label">возраст</label>
+                      <input placeholder="возраст" id="ageInput">
+                  </div>
+              </div>
+              <div class="btn-group">
+                  <div style="width: 100%">
+                      <label class="modal-label">Серия документа</label>
+                      <input placeholder="Серия паспорта" id="passwordInput"/>
+                  </div>
+                  <div  style="width: 100%">
+                      <label class="modal-label">Номер документ</label>
+                      <input placeholder="Номер паспорта" id="passwordsInput"/>
+                  </div>
+                  <div style="width: 100%">
+                      <label class="modal-label">пол</label>
+                      <select style="width: 96%;" id="genderInput">
+                          <option value="" disabled selected>Укажите пол</option>
+                          <option>мужской</option>
+                          <option>женский</option>
+                      </select>
+                  </div>
+              </div>
+              <div style="display:flex; justify-content: center; padding-top: 100px; gap:10px; padding-bottom: 30px;">
+                  <button  class="close-btn close">Отменить</button>
+                  <button class="add-btn" id="addToTableBtn">Разместить</button>
+              </div>
+          </form>
+      </div>
+     </div>
+     <div id="login">
+         <!-- Your login content here -->
+     </div>
+     <table id="data-table">
+         <button id="deleteTableBtn">удалить</button>
+     </table>
+ </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
